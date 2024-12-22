@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ktpmudModelStoreContainer" CdmEntityContainer="ktpmudEntities">
+    <EntitySetMapping Name="animals">
+      <EntityTypeMapping TypeName="ktpmudModel.animal">
+        <MappingFragment StoreEntitySet="animal">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Chung_nhan">
+      <EntityTypeMapping TypeName="ktpmudModel.Chung_nhan">
+        <MappingFragment StoreEntitySet="Chung_nhan">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Co_so">
+      <EntityTypeMapping TypeName="ktpmudModel.Co_so">
+        <MappingFragment StoreEntitySet="Co_so">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id_con_giong_vat_nuoi" ColumnName="id_con_giong_vat_nuoi" />
+          <ScalarProperty Name="id_animal" ColumnName="id_animal" />
+          <ScalarProperty Name="id_tinh_phoi" ColumnName="id_tinh_phoi" />
+          <ScalarProperty Name="id_loai_hinh" ColumnName="id_loai_hinh" />
+          <ScalarProperty Name="id_user_dung_dau" ColumnName="id_user_dung_dau" />
+          <ScalarProperty Name="id_xa" ColumnName="id_xa" />
+          <ScalarProperty Name="id_huyen" ColumnName="id_huyen" />
+          <ScalarProperty Name="id_gen" ColumnName="id_gen" />
+          <ScalarProperty Name="id_thuc_an_chan_nuoi" ColumnName="id_thuc_an_chan_nuoi" />
+          <ScalarProperty Name="id_chung_nhan" ColumnName="id_chung_nhan" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Con_giong_vat_nuoi">
+      <EntityTypeMapping TypeName="ktpmudModel.Con_giong_vat_nuoi">
+        <MappingFragment StoreEntitySet="Con_giong_vat_nuoi">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="bao_ton" ColumnName="bao_ton" />
+          <ScalarProperty Name="cam_xuat_khau" ColumnName="cam_xuat_khau" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Gen_dv">
+      <EntityTypeMapping TypeName="ktpmudModel.Gen_dv">
+        <MappingFragment StoreEntitySet="Gen_dv">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Huyens">
+      <EntityTypeMapping TypeName="ktpmudModel.Huyen">
+        <MappingFragment StoreEntitySet="Huyen">
+          <ScalarProperty Name="id_Huyen" ColumnName="id_Huyen" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="loai_hinh_tac_dong">
+      <EntityTypeMapping TypeName="ktpmudModel.loai_hinh_tac_dong">
+        <MappingFragment StoreEntitySet="loai_hinh_tac_dong">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Loai_hinh_user">
+      <EntityTypeMapping TypeName="ktpmudModel.Loai_hinh_user">
+        <MappingFragment StoreEntitySet="Loai_hinh_user">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="quy_mo">
+      <EntityTypeMapping TypeName="ktpmudModel.quy_mo">
+        <MappingFragment StoreEntitySet="quy_mo">
+          <ScalarProperty Name="id_quy_mo" ColumnName="id_quy_mo" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="ktpmudModel.Role">
+        <MappingFragment StoreEntitySet="Role">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="ktpmudModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="thanh_phan_thuc_an">
+      <EntityTypeMapping TypeName="ktpmudModel.thanh_phan_thuc_an">
+        <MappingFragment StoreEntitySet="thanh_phan_thuc_an">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="cam" ColumnName="cam" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tinh_phoi_uu_trung_aptrung">
+      <EntityTypeMapping TypeName="ktpmudModel.Tinh_phoi_uu_trung_aptrung">
+        <MappingFragment StoreEntitySet="Tinh_phoi_uu_trung_aptrung">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="ktpmudModel.user">
+        <MappingFragment StoreEntitySet="user">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="sdt" ColumnName="sdt" />
+          <ScalarProperty Name="id_xa" ColumnName="id_xa" />
+          <ScalarProperty Name="user_name" ColumnName="user_name" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="id_quy_mo" ColumnName="id_quy_mo" />
+          <ScalarProperty Name="id_huyen" ColumnName="id_huyen" />
+          <ScalarProperty Name="id_co_so" ColumnName="id_co_so" />
+          <ScalarProperty Name="id_role" ColumnName="id_role" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Xas">
+      <EntityTypeMapping TypeName="ktpmudModel.Xa">
+        <MappingFragment StoreEntitySet="Xa">
+          <ScalarProperty Name="id_xa" ColumnName="id_xa" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id_Huyen" ColumnName="id_Huyen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="logs">
+      <EntityTypeMapping TypeName="ktpmudModel.log">
+        <MappingFragment StoreEntitySet="log">
+          <ScalarProperty Name="id_loai_hinh_tac_dong" ColumnName="id_loai_hinh_tac_dong" />
+          <ScalarProperty Name="id_user" ColumnName="id_user" />
+          <ScalarProperty Name="time" ColumnName="time" />
+          <ScalarProperty Name="du_lieu_tac_dong" ColumnName="du_lieu_tac_dong" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="ktpmudModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="ktpmudModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="ktpmudModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="ktpmudModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ktpmudModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="ktpmudModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ktpmudModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="ktpmudModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="ktpmudModel.Store.sp_upgraddiagrams" />
+  </EntityContainerMapping>
+</Mapping>

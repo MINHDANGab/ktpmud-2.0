@@ -1,0 +1,38 @@
+﻿<Window x:Class="WpfApp1.View.UserWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1.View"
+        mc:Ignorable="d"
+        Title="UserWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <!-- Menu width -->
+            <ColumnDefinition Width="*"/>
+            <!-- Main content width -->
+        </Grid.ColumnDefinitions>
+
+        <!-- Menu Section -->
+        <Grid Grid.Column="0" Background="#FF3E9CBF">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="Menu" FontSize="24" Foreground="White" Margin="10" HorizontalAlignment="Center" Grid.Row="0"/>
+            <StackPanel Grid.Row="1" Margin="10">
+                <Button Content="Thông tin" Padding="5" Margin="0,5,0,0"/>
+                <!-- Thêm các nút khác ở đây nếu cần -->
+            </StackPanel>
+            <Button Content="Đăng xuất" Padding="5" Margin="10" Grid.Row="2" Click="LogoutButton_Click"/>
+        </Grid>
+
+        <!-- Main Content Section -->
+        <Grid Grid.Column="1" Background="White">
+            <TextBlock Text="Welcome to User Dashboard!" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Grid>
+    </Grid>
+</Window>
