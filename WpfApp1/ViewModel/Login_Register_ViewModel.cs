@@ -126,13 +126,27 @@ namespace WpfApp1.ViewModel
         {
             try
             {
-                if (string.IsNullOrWhiteSpace(RegisterUsername) || string.IsNullOrWhiteSpace(RegisterPassword) || SelectedRole == null)
+                if (string.IsNullOrWhiteSpace(RegisterUsername) || string.IsNullOrWhiteSpace(RegisterPassword))
                 {
                     MessageBox.Show("Vui lòng điền đầy đủ thông tin đăng kí.");
                     return;
                 }
 
-                var newUser = new user { user_name = RegisterUsername, password = RegisterPassword, Role = SelectedRole };
+                // Set the default role to "user" if no role is selected
+                Role defaultRole = SelectedRole ?? _dbContext.Roles.FirstOrDefault(r => r.name.Equals("user", StringComparison.OrdinalIgnoreCase));
+                if (defaultRole == null)
+                {
+                    MessageBox.Show("Không tìm thấy vai trò 'user'. Vui lòng kiểm tra dữ liệu.");
+                    return;
+                }
+
+                var newUser = new user
+                {
+                    user_name = RegisterUsername,
+                    password = RegisterPassword,
+                    id_role = defaultRole.id
+                };
+
                 _userService.AddUser(newUser);
 
                 MessageBox.Show("Đăng kí thành công!");
@@ -142,6 +156,7 @@ namespace WpfApp1.ViewModel
                 MessageBox.Show($"Đã xảy ra lỗi: {ex.Message}");
             }
         }
+
 
         public event PropertyChangedEventHandler PropertyChanged;
 

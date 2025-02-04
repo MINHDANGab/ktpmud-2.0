@@ -13,80 +13,96 @@
 
             <TextBlock Text="Quản lý cơ sở" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,10,0,20"/>
 
-            <Grid Grid.Row="1" Margin="0,10,0,10">
+            <Grid Grid.Row="1" Margin="0,0,0,0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <StackPanel Grid.Column="0" Margin="10" VerticalAlignment="Top">
-                    <TextBlock Text="Tên cơ sở:"/>
-                    <TextBox Text="{Binding NewName, UpdateSourceTrigger=PropertyChanged}" Width="200" Margin="0,5,0,15"/>
-
-                    <TextBlock Text="Con giống vật nuôi:"/>
-                    <ComboBox ItemsSource="{Binding ConGiongVatNuois}" 
-                              SelectedValue="{Binding NewConGiongVatNuoiId, Mode=TwoWay}"
-                              SelectedValuePath="id"
-                              DisplayMemberPath="name"
-                              Width="200" Margin="0,5,0,15"/>
-
-                    <TextBlock Text="Animal:"/>
-                    <ComboBox ItemsSource="{Binding Animals}" 
-                              SelectedValue="{Binding NewAnimalId, Mode=TwoWay}"
-                              SelectedValuePath="id"
-                              DisplayMemberPath="name"
-                              Width="200" Margin="0,5,0,15"/>
-
-                    <TextBlock Text="Tính phối:"/>
-                    <ComboBox ItemsSource="{Binding TinhPhois}" 
-                              SelectedValue="{Binding NewTinhPhoiId, Mode=TwoWay}"
-                              SelectedValuePath="id"
-                              DisplayMemberPath="name"
-                              Width="200" Margin="0,5,0,15"/>
+                <StackPanel Grid.Column="0" Margin="0,0,10,10" >
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+                        <TextBlock Text="Tên cơ sở :" Width="120" VerticalAlignment="Center"/>
+                        <TextBox Text="{Binding NewName, UpdateSourceTrigger=PropertyChanged}" Width="200" Padding="5"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,20" >
+                        <TextBlock Text="Con giống vật nuôi :" Width="120"  VerticalAlignment="Center" />
+                        <ComboBox ItemsSource="{Binding ConGiongVatNuois}" 
+                   SelectedValue="{Binding NewConGiongVatNuoiId, Mode=TwoWay}"
+                   SelectedValuePath="id"
+                   DisplayMemberPath="name"
+                   Width="200" Padding="5"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+                        <TextBlock Text="Animal :" Width="120" VerticalAlignment="Center"/>
+                        <ComboBox ItemsSource="{Binding Animals}" 
+                   SelectedValue="{Binding NewAnimalId, Mode=TwoWay}"
+                   SelectedValuePath="id"
+                   DisplayMemberPath="name"
+                   Width="200" Padding="5"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+                        <TextBlock Text="Tính phối :" Width="120" VerticalAlignment="Center"/>
+                        <ComboBox ItemsSource="{Binding TinhPhois}" 
+                   SelectedValue="{Binding NewTinhPhoiId, Mode=TwoWay}"
+                   SelectedValuePath="id"
+                   DisplayMemberPath="name"
+                   Width="200" Padding="5"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+                        <TextBlock Text="Gen:" Width="120" VerticalAlignment="Center"/>
+                        <ComboBox ItemsSource="{Binding Gens}" 
+                   SelectedValue="{Binding NewGenId, Mode=TwoWay}"
+                   SelectedValuePath="id"
+                   DisplayMemberPath="name"
+                   Width="200" Padding="5"/>
+                    </StackPanel>
                 </StackPanel>
 
-                <StackPanel Grid.Column="1" Margin="10" VerticalAlignment="Top">
-                    <TextBlock Text="Gen:"/>
-                    <ComboBox ItemsSource="{Binding Gens}" 
-                              SelectedValue="{Binding NewGenId, Mode=TwoWay}"
-                              SelectedValuePath="id"
-                              DisplayMemberPath="name"
-                              Width="200" Margin="0,5,0,15"/>
+                <StackPanel Grid.Column="1" Margin="10,0,0,0" >
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+                        <TextBlock Text="Thức ăn chăn nuôi :" Width="120" VerticalAlignment="Center" Height="27.96"/>
+                        <ComboBox ItemsSource="{Binding ThucAnChanNuoiOptions}" 
+              SelectedValue="{Binding NewThucAnChanNuoi, Mode=TwoWay}" 
+              Width="200" Padding="5">
+                        </ComboBox>
+                    </StackPanel>
 
-                    <TextBlock Text="Thức ăn chăn nuôi:"/>
-                    <CheckBox IsChecked="{Binding NewThucAnChanNuoi, Mode=TwoWay}" Width="200" Margin="0,5,0,15" Content="Có"/>
-
-                    <TextBlock Text="Chứng nhận:"/>
-                    <ComboBox ItemsSource="{Binding ChungNhans}" 
-                              SelectedValue="{Binding NewChungNhanId, Mode=TwoWay}"
-                              SelectedValuePath="id"
-                              DisplayMemberPath="name"
-                              Width="200" Margin="0,5,0,15"/>
-
-                    <TextBlock Text="Huyện:"/>
-                    <ComboBox ItemsSource="{Binding Huyens}" 
-                              SelectedValue="{Binding NewHuyenId, Mode=TwoWay}"
-                              SelectedValuePath="id_Huyen"
-                              DisplayMemberPath="name"
-                              Width="200" Margin="0,5,0,15"/>
-
-                    <TextBlock Text="Xã:"/>
-                    <ComboBox ItemsSource="{Binding Xas}" 
-                              SelectedValue="{Binding NewXaId, Mode=TwoWay}"
-                              SelectedValuePath="id_xa"
-                              DisplayMemberPath="name"
-                              Width="200" Margin="0,5,0,15"/>
-
-                    <TextBlock Text="Loại hình:"/>
-                    <ComboBox ItemsSource="{Binding LoaiHinhs}" 
-                              SelectedValue="{Binding NewLoaiHinhId, Mode=TwoWay}"
-                              SelectedValuePath="id"
-                              DisplayMemberPath="name"
-                              Width="200"/>
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+                        <TextBlock Text="Chứng nhận :" Width="120" VerticalAlignment="Center"/>
+                        <ComboBox ItemsSource="{Binding ChungNhans}" 
+                   SelectedValue="{Binding NewChungNhanId, Mode=TwoWay}"
+                   SelectedValuePath="id"
+                   DisplayMemberPath="name"
+                   Width="200" Padding="5"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+                        <TextBlock Text="Huyện :" VerticalAlignment="Center" Width="120"/>
+                        <ComboBox ItemsSource="{Binding Huyens}" 
+                   SelectedValue="{Binding NewHuyenId, Mode=TwoWay}"
+                   SelectedValuePath="id_Huyen"
+                   DisplayMemberPath="name"
+                   Width="200" Padding="5"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+                        <TextBlock Text="Xã :" Width="120" VerticalAlignment="Center"/>
+                        <ComboBox ItemsSource="{Binding Xas}" 
+                   SelectedValue="{Binding NewXaId, Mode=TwoWay}"
+                   SelectedValuePath="id_xa"
+                   DisplayMemberPath="name"
+                   Width="200" Padding="5"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                        <TextBlock Text="Loại hình :" Width="120" VerticalAlignment="Center"/>
+                        <ComboBox ItemsSource="{Binding LoaiHinhs}" 
+                   SelectedValue="{Binding NewLoaiHinhId, Mode=TwoWay}"
+                   SelectedValuePath="id"
+                   DisplayMemberPath="name"
+                   Width="200" Padding="5"/>
+                    </StackPanel>
                 </StackPanel>
             </Grid>
 
-            <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,0">
+            <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,0">
                 <Button Content="Thêm" Width="100" Margin="5" Command="{Binding OpenAddFacilityWindowCommand}" />
                 <Button Content="Cập nhật" Width="100" Margin="5" Command="{Binding UpdateFacilityCommand}" />
                 <Button Content="Xóa" Width="100" Margin="5" Command="{Binding DeleteFacilityCommand}" />
@@ -97,7 +113,7 @@
 
             <DataGrid Grid.Row="3" ItemsSource="{Binding Facilities}" 
                       SelectedItem="{Binding SelectedFacility, Mode=TwoWay}" 
-                      AutoGenerateColumns="False" Margin="10">
+                      AutoGenerateColumns="False" Margin="5">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Tên cơ sở" Binding="{Binding name}" Width="*"/>
                     <DataGridTextColumn Header="Loại hình" Binding="{Binding Loai_hinh_user.name}" Width="*"/>

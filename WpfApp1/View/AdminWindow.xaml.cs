@@ -14,6 +14,7 @@ namespace WpfApp1.View
             InitializeComponent();
             _loggedInUser = loggedInUser;
             _dbContext = dbContext;
+            MainContentFrame.Navigate(new WelcomeWindow());
         }
 
         private void LoginInfoButton_Click(object sender, RoutedEventArgs e)
@@ -45,15 +46,9 @@ namespace WpfApp1.View
             // Đóng cửa sổ hiện tại
             this.Close();
         }
-
-        private void MainContentFrame_Navigated(object sender, System.Windows.Navigation.NavigationEventArgs e)
+        private void Welcome_click(object sender, RoutedEventArgs e)
         {
-
+            MainContentFrame.Navigate(new WelcomeWindow());
         }
-        private void LogManagementButton_Click(object sender, RoutedEventArgs e)
-        {
-            MainContentFrame.Navigate(new LogManagementPage());
-        }
-
     }
 }

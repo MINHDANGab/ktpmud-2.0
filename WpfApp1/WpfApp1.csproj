@@ -163,11 +163,23 @@
     <Compile Include="View\LogManagementPage.xaml.cs">
       <DependentUpon>LogManagementPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\user-cshc.xaml.cs">
+      <DependentUpon>user-cshc.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\user-qlcs.xaml.cs">
+      <DependentUpon>user-qlcs.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\user-qlng.xaml.cs">
+      <DependentUpon>user-qlng.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\UserManagementPage.xaml.cs">
       <DependentUpon>UserManagementPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\UserWindow.xaml.cs">
       <DependentUpon>UserWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\WelcomeWindow.xaml.cs">
+      <DependentUpon>WelcomeWindow.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -209,11 +221,27 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\user-cshc.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\user-qlcs.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\user-qlng.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\UserManagementPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\UserWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\WelcomeWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -260,6 +288,11 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Images\backgroud.png" />
+    <Resource Include="Images\logo.jpg" />
+    <Resource Include="Images\nen.jpg" />
+    <Resource Include="Images\nen1.jpeg" />
+    <Resource Include="Images\background.jpg" />
     <Content Include="Model\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
@@ -271,5 +304,6 @@
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

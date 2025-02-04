@@ -1,0 +1,42 @@
+﻿<Page x:Class="WpfApp1.View.WelcomeWindow"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp1.View"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="WelcomeWindow">
+
+    <Grid>
+        <Grid Grid.Column="1" >
+            <!-- Background with an image -->
+            <Grid.Background>
+                <ImageBrush ImageSource="/images/nen1.jpeg" />
+            </Grid.Background>
+
+            <!-- Decorative Content -->
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,100">
+                <!-- Welcome text with shadow effect -->
+                <TextBlock Text="Chào mừng bạn đến với HUST FARM!" 
+            FontSize="30" 
+            FontWeight="Bold" 
+            Foreground="White" 
+            HorizontalAlignment="Center" 
+            TextAlignment="Center">
+                    <TextBlock.Effect>
+                        <DropShadowEffect Color="Black" Direction="315" ShadowDepth="5" Opacity="0.5" />
+                    </TextBlock.Effect>
+                </TextBlock>
+
+                <!-- Subtext with a slight margin -->
+                <TextBlock Text="Hãy bắt đầu hành trình của bạn!" 
+            FontSize="18" 
+            FontStyle="Italic" 
+            Foreground="White" 
+            HorizontalAlignment="Center" 
+            Margin="0,10,0,0"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>

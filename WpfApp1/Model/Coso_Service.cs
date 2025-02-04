@@ -226,6 +226,11 @@ namespace WpfApp1.Model
                 query = query.Where(c => c.id_chung_nhan == idChungNhan.Value);
             }
 
+            if (idThucAnChanNuoi.HasValue)
+            {
+                query = query.Where(c => c.id_thuc_an_chan_nuoi == idThucAnChanNuoi.Value);
+            }
+
             return query.Include(c => c.Huyen)
                         .Include(c => c.Xa)
                         .Include(c => c.Con_giong_vat_nuoi)

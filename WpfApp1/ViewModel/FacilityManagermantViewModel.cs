@@ -23,6 +23,12 @@ namespace WpfApp1.ViewModel
         public ObservableCollection<Xa> Xas { get; set; }
         public ObservableCollection<Loai_hinh_user> LoaiHinhs { get; set; }
         public ObservableCollection<Chung_nhan> ChungNhans { get; set; }
+        public ObservableCollection<bool?> ThucAnChanNuoiOptions { get; set; } = new ObservableCollection<bool?>
+{
+    null, // Tùy chọn không xác định
+    true, // Có
+    false // Không
+};
 
         public string NewName { get; set; }
         public int? NewConGiongVatNuoiId { get; set; }
@@ -30,6 +36,7 @@ namespace WpfApp1.ViewModel
         public int? NewTinhPhoiId { get; set; }
         public int? NewGenId { get; set; }
         public bool? NewThucAnChanNuoi { get; set; }
+
         public int? NewChungNhanId { get; set; }
         private int? _newHuyenId;
 
@@ -180,6 +187,7 @@ namespace WpfApp1.ViewModel
             NewHuyenId = null;
             NewXaId = null;
             NewLoaiHinhId = null;
+            OnPropertyChanged(nameof(NewThucAnChanNuoi));
 
             ConGiongVatNuois = new ObservableCollection<Con_giong_vat_nuoi>(_facilityService.GetAllConGiongVatNuois());
             Animals = new ObservableCollection<animal>(_facilityService.GetAllAnimals());

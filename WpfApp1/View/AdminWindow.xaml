@@ -11,21 +11,27 @@
         </Grid.ColumnDefinitions>
 
         <!-- Menu Section -->
-        <Grid Grid.Column="0" Background="#FF3E9CBF">
+        <Grid Grid.Column="0" Background="#FFEAEBAB">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
 
-            <TextBlock Text="Menu" FontSize="24" Foreground="White" Margin="10" HorizontalAlignment="Center" Grid.Row="0"/>
+            <Button Content="👤ADMIN"  FontSize="30" Padding="5" Margin="10" Click="Welcome_click" FontWeight="Bold" 
+Foreground="Black" Background="Transparent" BorderBrush="Transparent"/>
             <StackPanel Grid.Row="1" Margin="10">
-                <Button Content="Thông tin đăng nhập" Padding="5" Margin="0,5,0,0" Click="LoginInfoButton_Click"/>
-                <Button Content="Quản lý cơ sở hành chính" Padding="5" Margin="0,5,0,0" Click="AdminManagementButton_Click"/>
-                <Button Content="Quản lý người dùng" Padding="5" Margin="0,5,0,0" Click="UserManagementButton_Click"/>
-                <Button Content="Quản lý cơ sở" Padding="5" Margin="0,5,0,0" Click="FacilityManagementButton_Click"/>
+                <Button Content="Thông tin đăng nhập" Padding="5" Margin="0,5,0,0" Click="LoginInfoButton_Click" FontWeight="Bold" 
+Foreground="Black"/>
+                <Button Content="Quản lý cơ sở hành chính" Padding="5" Margin="0,5,0,0" Click="AdminManagementButton_Click" FontWeight="Bold" 
+Foreground="Black"/>
+                <Button Content="Quản lý người dùng" Padding="5" Margin="0,5,0,0" Click="UserManagementButton_Click" FontWeight="Bold" 
+Foreground="Black"/>
+                <Button Content="Quản lý cơ sở" Padding="5" Margin="0,5,0,0" Click="FacilityManagementButton_Click" FontWeight="Bold" 
+Foreground="Black"/>
             </StackPanel>
-            <Button Content="Đăng xuất" Padding="5" Margin="10" Grid.Row="2" Click="LogoutButton_Click"/>
+            <Button Content="Đăng xuất" Padding="5" Margin="10" Grid.Row="2" Click="LogoutButton_Click" FontWeight="Bold" 
+Foreground="Black"/>
         </Grid>
 
         <!-- Main Content Section -->

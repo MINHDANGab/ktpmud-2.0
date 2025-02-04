@@ -44,6 +44,16 @@ namespace WpfApp1.ViewModel
         public string NewEmail { get; set; }
         public int? NewRoleId { get; set; }
         public string NewPassword { get; set; }
+        private int? _selectedRoleIdForSearch;
+        public int? SelectedRoleIdForSearch
+        {
+            get => _selectedRoleIdForSearch;
+            set
+            {
+                _selectedRoleIdForSearch = value;
+                OnPropertyChanged(nameof(SelectedRoleIdForSearch));
+            }
+        }
 
 
         public ObservableCollection<Xa> NewXas { get; set; }
@@ -318,14 +328,26 @@ namespace WpfApp1.ViewModel
 
         private void SearchUser()
         {
-            var result = _userService.SearchUsers(null, NewUsername, NewSdt, NewEmail, NewXaId, NewHuyenId).ToList();
+            var result = _userService.SearchUsers(
+                null,
+                NewUsername,
+                NewSdt,
+                NewEmail,
+                NewXaId,
+                NewHuyenId,
+                SelectedRoleIdForSearch // Thêm Role vào bộ lọc
+            ).ToList();
+
             if (result.Count == 0)
             {
                 MessageBox.Show("Không tìm thấy người dùng nào phù hợp.", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Information);
             }
+
             Users = new ObservableCollection<user>(result);
             OnPropertyChanged(nameof(Users));
         }
+
+
 
 
         public event PropertyChangedEventHandler PropertyChanged;

@@ -66,6 +66,17 @@ namespace WpfApp1.ViewModel
             }
         }
 
+        public ICommand RefreshCommand
+        {
+            get
+            {
+                if (_refreshCommand == null)
+                {
+                    _refreshCommand = new RelayCommand(param => LoadData());
+                }
+                return _refreshCommand;
+            }
+        }
 
         private void LoadData()
         {
@@ -102,11 +113,6 @@ namespace WpfApp1.ViewModel
             }
         }
 
-
-
-
-
-
         public LoginInfoViewModel(user loggedInUser, YourDbContext dbContext)
         {
             _dbContext = dbContext;
@@ -116,6 +122,9 @@ namespace WpfApp1.ViewModel
             QuyMo = new ObservableCollection<quy_mo>(_dbContext.quy_mo.ToList());
 
             LoggedInUser = loggedInUser;  // Gán LoggedInUser sẽ kích hoạt cập nhật SelectedHuyen và danh sách Xas
+
+            // Khởi tạo _refreshCommand
+            _refreshCommand = new RelayCommand(param => LoadData());
         }
 
         private void LoadXas()
@@ -168,5 +177,4 @@ namespace WpfApp1.ViewModel
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
-
 }

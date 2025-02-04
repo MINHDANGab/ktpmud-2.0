@@ -28,9 +28,9 @@
 
             <!-- Chức năng thêm, sửa -->
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <Button Content="Thêm Huyện" Command="{Binding AddHuyenCommand}" Margin="5"/>
-                <Button Content="Thêm Xã" Command="{Binding AddXaCommand}" Margin="5"/>
-                <Button Content="Cập nhật Thông tin" Command="{Binding UpdateCommand}" Margin="5"/>
+                <Button Content="Thêm Huyện" Command="{Binding AddHuyenCommand}" Width="100" Height="20" Margin="5"/>
+                <Button Content="Thêm Xã" Command="{Binding AddXaCommand}" Width="100" Height="20" Margin="5"/>
+                <Button Content="Cập nhật" Command="{Binding UpdateCommand}" Width="100" Height="20" Margin="5"/>
             </StackPanel>
         </StackPanel>
     </Grid>

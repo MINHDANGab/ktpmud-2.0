@@ -151,7 +151,7 @@ namespace WpfApp1.Model
             return _context.quy_mo.ToList();
         }
 
-        public IQueryable<user> SearchUsers(int? id = null, string userName = null, string sdt = null, string email = null, int? idXa = null, int? idHuyen = null)
+        public IQueryable<user> SearchUsers(int? id = null, string userName = null, string sdt = null, string email = null, int? idXa = null, int? idHuyen = null, int? idRole = null)
         {
             var query = _context.Users.AsQueryable();
 
@@ -174,7 +174,10 @@ namespace WpfApp1.Model
             {
                 query = query.Where(u => u.email.Contains(email));
             }
-
+            if (idRole.HasValue)
+            {
+                query = query.Where(u => u.id_role == idRole.Value);
+            }
             if (idXa.HasValue)
             {
                 query = query.Where(u => u.id_xa == idXa.Value);
